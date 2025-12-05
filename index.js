@@ -55,5 +55,6 @@ function drawDoneCards(){
     
     return output;
 }
+document.getElementById('todo-cards').innerHTML = drawTodoCards();
 document.getElementById('doing-cards').innerHTML = drawDoingCards();
 document.getElementById('done-cards').innerHTML = drawDoneCards();
