@@ -44,12 +44,16 @@ function drawDoingCards(){
     return output;
 }
 
-
-
 function drawDoneCards(){
+    let output = '';
     
+    tasks.forEach((task, index) => {
+        if(task.status == 'done'){
+            output += drawCard(index, task);
+        }
+    });
+    
+    return output;
 }
-
-document.getElementById('todo-cards').innerHTML = drawTodoCards();
 document.getElementById('doing-cards').innerHTML = drawDoingCards();
 document.getElementById('done-cards').innerHTML = drawDoneCards();
